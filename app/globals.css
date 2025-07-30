@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  /* Primary Colors - Kenya Government Theme */
+  --primary-blue: #003366;
+  /* Deep navy blue */
+  --primary-green: #006633;
+  /* Kenya green */
+  --accent-red: #cc0000;
+  /* Kenya red */
+
+  /* Secondary Colors */
+  --secondary-blue: #1e4d8b;
+  /* Lighter blue */
+  --secondary-green: #2d8f47;
+  /* Lighter green */
+
+  /* Neutral Colors */
+  --background: #ffffff;
+  --foreground: #2c3e50;
+  /* Dark gray-blue */
+  --gray-light: #f8f9fa;
+  --gray-medium: #6c757d;
+  --gray-dark: #343a40;
+
+  /* Text Colors */
+  --text-primary: #2c3e50;
+  --text-secondary: #6c757d;
+  --text-light: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Custom color palette */
+  --color-primary-blue: var(--primary-blue);
+  --color-primary-green: var(--primary-green);
+  --color-accent-red: var(--accent-red);
+  --color-secondary-blue: var(--secondary-blue);
+  --color-secondary-green: var(--secondary-green);
+  --color-gray-light: var(--gray-light);
+  --color-gray-medium: var(--gray-medium);
+  --color-gray-dark: var(--gray-dark);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-light: var(--text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1a;
+    --foreground: #e6e6e6;
+    --gray-light: #2d3748;
+    --gray-medium: #718096;
+    --gray-dark: #e6e6e6;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom utility classes for Kenya government theme */
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.bg-primary-green {
+  background-color: var(--primary-green);
+}
+
+.bg-accent-red {
+  background-color: var(--accent-red);
+}
+
+.bg-secondary-blue {
+  background-color: var(--secondary-blue);
+}
+
+.bg-secondary-green {
+  background-color: var(--secondary-green);
+}
+
+.text-primary-blue {
+  color: var(--primary-blue);
+}
+
+.text-primary-green {
+  color: var(--primary-green);
+}
+
+.text-accent-red {
+  color: var(--accent-red);
+}
+
+.text-secondary-blue {
+  color: var(--secondary-blue);
+}
+
+.text-secondary-green {
+  color: var(--secondary-green);
+}
+
+.border-primary-blue {
+  border-color: var(--primary-blue);
+}
+
+.border-primary-green {
+  border-color: var(--primary-green);
+}
+
+.border-accent-red {
+  border-color: var(--accent-red);
+}
+
+/* Hover states */
+.hover-primary-blue:hover {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+}
+
+.hover-primary-green:hover {
+  background-color: var(--primary-green);
+  color: var(--text-light);
+}
+
+.hover-accent-red:hover {
+  background-color: var(--accent-red);
+  color: var(--text-light);
+}
