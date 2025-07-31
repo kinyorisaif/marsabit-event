@@ -2,21 +2,17 @@
 
 import { events } from "@/lib/data/events";
 import Image from "next/image";
-import { notFound } from "next/navigation"; // Optional: Better than manual error message
+import { notFound } from "next/navigation";
 
-// Use Next.js App Router typing pattern
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
-export default function EventPage({ params }: Props) {
+export default function EventPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const event = events.find((e) => e.id === params.id);
 
   if (!event) {
-    // You can return custom 404 UI here or redirect
-    notFound(); // cleaner: shows Next.js 404 page
+    notFound(); // built-in 404 page
   }
 
   return (
@@ -65,3 +61,4 @@ export default function EventPage({ params }: Props) {
     </div>
   );
 }
+
