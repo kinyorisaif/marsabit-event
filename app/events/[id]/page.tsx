@@ -10,9 +10,8 @@ export default function EventPage({
   params: { id: string };
 }) {
   const event = events.find((e) => e.id === params.id);
-
   if (!event) {
-    notFound(); // built-in 404 page
+    notFound();
   }
 
   return (
@@ -37,7 +36,7 @@ export default function EventPage({
       </div>
 
       <p className="text-gray-500 text-sm">
-        📅 {new Date(event.start_date).toLocaleDateString()} -{" "}
+        {new Date(event.start_date).toLocaleDateString()} -{" "}
         {new Date(event.end_date).toLocaleDateString()}
       </p>
 
@@ -61,4 +60,3 @@ export default function EventPage({
     </div>
   );
 }
-
