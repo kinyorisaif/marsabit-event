@@ -1,15 +1,22 @@
+// app/events/[id]/page.tsx
+
 import { events } from "@/lib/data/events";
 import Image from "next/image";
+import { notFound } from "next/navigation"; // Optional: Better than manual error message
 
-interface EventPageProps {
-  params: { id: string };
-}
+// Use Next.js App Router typing pattern
+type Props = {
+  params: {
+    id: string;
+  };
+};
 
-export default function EventPage({ params }: EventPageProps) {
+export default function EventPage({ params }: Props) {
   const event = events.find((e) => e.id === params.id);
 
   if (!event) {
-    return <p className="text-center mt-10 text-red-500">Event not found.</p>;
+    // You can return custom 404 UI here or redirect
+    notFound(); // cleaner: shows Next.js 404 page
   }
 
   return (
@@ -22,7 +29,9 @@ export default function EventPage({ params }: EventPageProps) {
         className="w-full h-80 object-cover rounded mb-6"
       />
       <h1 className="text-4xl font-bold mb-4">{event.title}</h1>
-      <p className="text-gray-600 text-sm mb-4">{event.venue} - {event.address}</p>
+      <p className="text-gray-600 text-sm mb-4">
+        {event.venue} - {event.address}
+      </p>
       <p className="text-gray-700 mb-6">{event.description}</p>
 
       <div className="mb-4">
@@ -45,7 +54,10 @@ export default function EventPage({ params }: EventPageProps) {
 
       <div className="mt-6 flex flex-wrap gap-2">
         {event.tags.map((tag, index) => (
-          <span key={index} className="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">
+          <span
+            key={index}
+            className="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full"
+          >
             #{tag}
           </span>
         ))}
