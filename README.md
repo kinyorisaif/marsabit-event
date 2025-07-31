@@ -10,11 +10,13 @@ Marsabit Cultural Events is a digital platform that celebrates the rich heritage
 
 ### Public Features
 
+- **Hero Section**: Stunning hero image showcasing Marsabit's natural beauty
 - **Event Discovery**: Browse upcoming, current, and past cultural events
 - **Event Categories**: Filter by Cultural, Sports, Music, Art, and Technology events
 - **Event Gallery**: Visual galleries showcasing memories from past events
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **Professional UI**: Kenya government-inspired color scheme and design
+- **Smooth Navigation**: Interactive elements with smooth scrolling
 
 ### Admin Features
 
@@ -90,13 +92,13 @@ marsabit-cultural-events/
 │   └── page.tsx             # Home page
 ├── components/
 │   ├── gallery/             # Gallery components
-│   ├── home/                # Home page components
+│   ├── home/                # Home page components (Hero, Events)
 │   └── navbar/              # Navigation components
 ├── lib/
 │   ├── data/                # Static data files
 │   └── interfaces/          # TypeScript interfaces
 ├── public/
-│   └── images/              # Event images and assets
+│   └── images/              # Event images and hero image
 └── README.md
 ```
 
@@ -114,7 +116,7 @@ marsabit-cultural-events/
 
 ### Public Pages
 
-- **Home (`/`)**: Event listings with filtering and search
+- **Home (`/`)**: Hero section with Marsabit imagery and event listings with filtering
 - **Gallery (`/gallery`)**: Visual galleries for all events
 - **Event Details (`/events/[id]`)**: Individual event information
 - **Login (`/auth/login`)**: Admin authentication
@@ -125,6 +127,15 @@ marsabit-cultural-events/
 - **Gallery Management (`/dashboard/manage/gallery`)**: Admin gallery management
 
 ## 🎯 Key Components
+
+## 🎯 Key Components
+
+### Hero Component
+
+- Stunning full-screen hero section with Marsabit landscape imagery
+- Call-to-action buttons with smooth scrolling functionality
+- Professional gradient overlay maintaining Kenya government theme
+- Responsive design adapting to all screen sizes
 
 ### Events Component
 
@@ -205,4 +216,3 @@ For questions, suggestions, or support:
 ---
 
 **Celebrating Marsabit's Rich Cultural Heritage** 🎭🎪🎨
-
